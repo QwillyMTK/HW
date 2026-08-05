@@ -1,0 +1,8 @@
+<h1>Список постов</h1>
+<ul>
+    {% for post in posts %}
+        <li>{{ post.title }} — {{ post.category.name }}</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'post_create' %}">Создать пост</a> |
+<a href="{% url 'category_create' %}">Создать категорию</a>
